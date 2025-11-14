@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha agenda</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+<div class="container">
+    <h1>Minha Agenda de Contatos</h1><br>
+    <h2>Insira aqui os dados:</h2>
+    
+    <form id="form-contato">
+        <input type="text" id="nome" placeholder="Digite o nome" required>
+        <input type="tel" id="telefone" placeholder="Digite o telefone" required> 
+        <button type="submit">Cadastrar</button>
+    </form>
+    <br><h2>Contatos:</h2>
+    <table id="tabela-contatos">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody id="tbody-contatos">
+        </tbody>
+    </table>
+</div>
+
+<script>
+function adicionarContato(event) {
+    event.preventDefault();
+
+    const nomeInput = document.getElementById('nome');
+    const telefoneInput = document.getElementById('telefone');
+    const nome = nomeInput.value;
+    const telefone = telefoneInput.value;
+
+    if (nome && telefone) {
+        const tbody = document.getElementById('tbody-contatos');
+
+        const novaLinha = document.createElement('tr');
+
+        const celulaNome = document.createElement('td');
+        const celulaTelefone = document.createElement('td');
+
+        celulaNome.textContent = nome;
+        celulaTelefone.textContent = telefone;
+
+        novaLinha.appendChild(celulaNome);
+        novaLinha.appendChild(celulaTelefone);
+
+        tbody.appendChild(novaLinha);
+
+        nomeInput.value = '';
+        telefoneInput.value = '';
+        nomeInput.focus();
+    }
+}
+
+const form = document.getElementById('form-contato');
+form.addEventListener('submit', adicionarContato);
+</script>
+
+</body>
+</html>

@@ -1,6 +1,18 @@
 body {
     font-family: sans-serif;
     margin: 20px;
+    background-color: #f0f8ff;
+    background-image: url('image/fundo.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    color: #043158;
+    text-align: center;
+    background-color: #97129031;
 }
 
 .container {
@@ -22,7 +34,7 @@ input {
 
 button {
     padding: 10px;
-    background-color: #ebe7e0;
+    background-color: #c2a08e;
     color: rgba(0, 0, 0, 0.637);
     border: none;
     cursor: pointer;
@@ -30,7 +42,7 @@ button {
 }
 
 button:hover {
-    background-color: #f79eb1;
+    background-color: #af8e7c;
 }
 
 table {
@@ -48,5 +60,3 @@ th, td {
 th {
     background-color: #c6d4e1;
 }
-
-

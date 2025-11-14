@@ -3,6 +3,10 @@ body {
     margin: 20px;
 }
 
+selector {
+  background-color: #ebe7e0;
+}
+
 .container {
     max-width: 600px;
     margin: auto;
@@ -48,3 +52,4 @@ th, td {
 th {
     background-color: #c6d4e1;
 }
+

@@ -1,7 +1,3 @@
-header {
-    background-color: #97129031;
-}
-
 body {
     font-family: sans-serif;
     margin: 20px;
@@ -16,6 +12,7 @@ body {
 h1 {
     color: #043158;
     text-align: center;
+    background-color: #97129031;
 }
 
 .container {
@@ -63,4 +60,5 @@ th, td {
 th {
     background-color: #c6d4e1;
 }
+
 
